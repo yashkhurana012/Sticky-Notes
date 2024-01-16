@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roman", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (max-width:768px ){
+    section{
+        display: block !important;
+        background-color: black;
+
+    }
+    .box{
+        flex-wrap: wrap;
+      
+
+    }
+    main{
+        padding-left: 1rem;
+     
+    }
+    textarea{
+       
+
+    }
+    h1{
+        color: #fff !important;
+    }
+    .left{
+        width: 100% !important;
+        background-color: black !important;
+    }
+    .right{
+        width: 100% !important;
+    }
+    .notes_style{
+        margin: 12px auto;
+        box-shadow: 0px 0px 10px 0px #803636;
+    }
+
+}
+
+section{
+    display: flex;
+    
+ }
+ @keyframes fadeInDownBig {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -2000px, 0);
+      
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    
+    }
+  }
+
+h1{
+    text-align: center;
+    margin-top: 1rem;
+}
+.left{
+    
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(8, 8, 8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.right{
+    width: 50%;
+    height: 100vh;
+   
+    overflow-y: scroll;
+
+}
+main{
+    animation-name: fadeInDownBig;
+    animation-duration: 1s;
+}
+.box{
+   
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+textarea {
+    box-shadow: 4px 4px 10px 0px #803636;
+    border-radius: 5px;
+    padding: 15px;
+    width: 90%;
+    height: 13.813rem;
+}
+/* button{
+    padding: 20px 40px;
+    border-radius: 20px;
+    border: navajowhite;
+    margin-top: 20px;
+} */
+
+
+/* Right */
+#notes{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0px 15px;
+   padding-bottom: 2rem;
+    
+   
+}
+
+.notes_style{
+    width: 200px;
+    height: 150px;
+    padding: 25px 7px 3px 3px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
+    word-wrap: break-word;
+    border-radius: 6px;
+  
+}
+.cross{
+    position: absolute;
+    right: 12px;
+    top: 5px;
+    cursor: pointer;
+}
+.material-symbols-outlined{
+font-size: 20px !important;
+    
+}
+#para{display: flex;
+align-items: center;
+margin-top: 10rem;
+justify-content: center;
+}
+
+
+
+.primary-button {
+  
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    /* font-weight: bold; */
+    letter-spacing: 0.05rem;
+    border: 1px solid #0E1822;
+    padding: 0.8rem 2.1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    background-color: #0E1822;
+    background-size: 200%;
+    background-position: 200%;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+    transition-property: background-position, border, color;
+    position: relative;
+    z-index: 1;
+   }
+   
+   /* .primary-button:hover {
+    border: 1px solid #FF4655;
+    color: white;
+    background-position: 40%;
+   } */
+   
+   .primary-button:before {
+    content: "";
+    position: absolute;
+    background-color: #0E1822;
+    width: 0.2rem;
+    height: 0.2rem;
+    top: -1px;
+    left: -1px;
+    transition: background-color 0.15s ease-in-out;
+   }
+   
+   /* .primary-button:hover:before {
+    background-color: white;
+   }
+   
+   .primary-button:hover:after {
+    background-color: white;
+   } */
+   
+   .primary-button:after {
+    content: "";
+    position: absolute;
+    background-color: #FF4655;
+   
+    width: 0.3rem;
+    height: 0.3rem;
+    bottom: -1px;
+    right: -1px;
+    transition: background-color 0.15s ease-in-out;
+   }
+   
+   .button-borders {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2rem;
+    margin-left: 7px;
+   }
+   
+   .button-borders:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 0.5em);
+    height: 50%;
+    left: -0.3em;
+    top: -0.3em;
+    border: 1px solid #0E1822;
+    border-bottom: 0px;
+       /* opacity: 0.3; */
+   }
+   
+   .button-borders:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 0.5em);
+    height: 50%;
+    left: -0.3em;
+    bottom: -0.3em;
+    border: 1px solid #0E1822;
+    border-top: 0px;
+       /* opacity: 0.3; */
+    z-index: 0;
+   }
+   
+   .shape {
+    fill: #0E1822;
+   }
+   
+  
